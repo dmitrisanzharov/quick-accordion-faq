@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+
+$font-main: 'Varela Round', sans-serif;
+
+.dr{
+    border: 2px solid red;
+}
+
+.db{
+    border: 2px solid blue;
+};
+
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper{
+    width: 100vw;
+    height: 100vh; 
+    background-color: #4B145B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.wrapper .box{
+    background-color: white;
+    border-radius: 10px;
+    max-width: 920px;
+    min-height: 540px;
+    padding: 2rem;
+    padding-top: 3rem;
+    display: flex;
+    margin: 2rem;
+}
+
+.wrapper .box .heading{
+    font-size: 30px;
+    min-width: 250px;
+    margin-right: 33px;
+    margin-bottom: 3rem;
+}
+
+.wrapper .box .faq-holder{
+    max-width: 575px;
+}
+
+
+
+//********************************************************************
+//          SINGLE COMPONENT
+// *******************************************************************
+
+.singleWrap{
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    font-family: $font-main;
+    padding: .75rem;
+    overflow: hidden;
+    }
+
+.singleWrapClosed{
+    @extend .singleWrap;
+    height: 50px;
+}
+
+
+.singleWrap .title-span-wrap{
+    display: flex;
+    justify-content: space-between;
+}
+
+.singleWrap .title-span-wrap span{
+    background-color: #EAE6EB;
+    min-height: 32px;
+    min-width: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #B4345C;
+}
+
+
+@media all and (max-width: 800px){
+    .wrapper .box{
+        flex-direction: column;
+    }
+
+    .wrapper .box .heading{
+        width: 100%;
+        text-align: center;
+    }
+
+    .singleWrapClosed{
+        height: 60px;
+    }
+
+    .singleWrap .title-span-wrap span{
+        margin: 1rem;
+    }
+
+
+
+    // end of media 800px
+}
+
+@media all and (max-width: 490px){
+    .singleWrapClosed{
+        height: 72px;
+    }
+
+}
